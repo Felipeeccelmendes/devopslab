@@ -20,3 +20,7 @@ deploy:
   app: devopslabfelipeeccel
   on:
       branch: main
+
+      script:
+  - python -m unittest -v test
+  - echo "passei por aqui"
