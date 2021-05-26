@@ -26,8 +26,8 @@ deploy:
   on:
       branch: main
 
-   provider: gae
-    keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
-    project: lab-devops-cloud-eccel
-    on:
-      branch: main
+      # provider: gae
+      # keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
+      # project: lab-devops-cloud-eccel
+      # on:
+      # branch: main
