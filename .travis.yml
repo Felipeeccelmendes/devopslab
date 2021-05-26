@@ -18,18 +18,18 @@ script:
 
 # Definir o Deploy no Heroku
 deploy:
-  provider: heroku
-  strategy: api
-  api_key: $HEROKU_API_KEY
-  edge: true
-  app: devopslabfelipeeccel
-  on:
+  - provider: heroku
+    strategy: api
+    api_key: $HEROKU_API_KEY
+    edge: true
+    app: devopslabfelipeeccel
+    on:
       branch: main
 
-  provider: gae
-  keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
-  project: lab-devops-cloud-eccel
-  on:
+  - provider: gae
+    keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
+    project: lab-devops-cloud-eccel
+    on:
       branch: main
 
 before_install:
