@@ -26,8 +26,14 @@ deploy:
   on:
       branch: main
 
-      # provider: gae
-      # keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
-      # project: lab-devops-cloud-eccel
-      # on:
-      # branch: main
+  provider: gae
+  keyfile: ../lab-devops-cloud-eccel-27e4cf17f687.json
+  project: lab-devops-cloud-eccel
+  on:
+      branch: main
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_591e4138163c_key -iv $encrypted_591e4138163c_iv
+  -in lab-devops-cloud-eccel-27e4cf17f687.json.enc -out ../lab-devops-cloud-eccel-27e4cf17f687.json
+  -d
+    
